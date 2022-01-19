@@ -2,6 +2,8 @@ import React from 'react';
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 
+import Item from './Item';
+
 export function SortableItem(props) {
   const {
     attributes,
@@ -17,8 +19,8 @@ export function SortableItem(props) {
   };
   
   return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      {/* ... */}
-    </div>
+    <Item ref={setNodeRef} style={style} {...attributes} {...listeners}>
+      {value}
+    </Item>
   );
 }
